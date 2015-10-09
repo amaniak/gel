@@ -5,27 +5,27 @@ import "strings"
 type Token int
 
 const (
-  START Token = iota
+	START Token = iota
 	COMMENT
 	FUNC
 	IMFUNC
 	PROC
 	IMPROC
 	EXEC
-  QUERY
+	QUERY
 	IDENT
 	EOF
 )
 
 var tokens = [...]string{
-	COMMENT:  "--",
-	FUNC:     "func",
-	IMFUNC:   "func!",
-	PROC:     "proc",
-	IMPROC:   "proc!",
-  EXEC:     "exec!",
-  QUERY:    "|>",
-	IDENT:    "",
+	COMMENT: "--",
+	FUNC:    "func",
+	IMFUNC:  "func!",
+	PROC:    "proc",
+	IMPROC:  "proc!",
+	EXEC:    "exec!",
+	QUERY:   "|>",
+	IDENT:   "",
 }
 
 var keywords map[string]Token
